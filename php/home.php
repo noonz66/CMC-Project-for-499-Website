@@ -29,7 +29,7 @@ if (!isset($_SESSION['loggedin'])) {
     </nav>
     <div class="content">
         <h2>Dashboard</h2>
-        <p>Welcome back, <?= $_SESSION['name'] ?>!</p>
+        <p>Welcome back, <?= $_SESSION['fname'] ?>!</p>
     </div>
     <div class="footer">
         <p>&copy Capital Municipal Council of Bahrain</p>
