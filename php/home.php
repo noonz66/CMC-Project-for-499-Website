@@ -22,14 +22,17 @@ if (!isset($_SESSION['loggedin'])) {
         <div>
             <a href="../php/home.php">
                 <img class="whiteback" src="../assets/logo.svg" alt="Capital Municipal Council" width="50px" height="50px">
-                <h1>Capital Municipal Council</h1>
+                <h1>Capital Municipal Council of Bahrain</h1>
             </a>
             <a href="../php/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
         </div>
     </nav>
     <div class="content">
         <h2>Dashboard</h2>
-        <p>Welcome back, <?= $_SESSION['fname'] ?>!</p>
+        <p>Welcome back, <?= $_SESSION['fname'] ?>!
+            <br><br><br>
+            Please select below which page you want to edit by clicking on one of the icons below.
+        </p>
     </div>
     <div class="footer">
         <p>&copy Capital Municipal Council of Bahrain</p>
