@@ -24,7 +24,6 @@ if (!isset($_SESSION['loggedin'])) {
                 <img class="whiteback" src="../assets/logo.svg" alt="Capital Municipal Council" width="50px" height="50px">
                 <h1>Capital Municipal Council</h1>
             </a>
-            <a href="../php/profile.php"><i class="fas fa-user-circle"></i>Profile</a>
             <a href="../php/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
         </div>
     </nav>
