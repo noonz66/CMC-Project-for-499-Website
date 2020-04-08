@@ -37,11 +37,12 @@ $stmt->close();
 <body class="loggedin">
     <nav class="navtop">
         <div>
-            <img class="whiteback" src="../assets/logo.svg" alt="Capital Municipal Council" width="50px" height="50px">
-
-            <h1>Capital Municipal Council</h1>
-            <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-            <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+            <a href="../php/home.php">
+                <img class="whiteback" src="../assets/logo.svg" alt="Capital Municipal Council" width="50px" height="50px">
+                <h1>Capital Municipal Council</h1>
+            </a>
+            <a href="../php/profile.php"><i class="fas fa-user-circle"></i>Profile</a>
+            <a href="../php/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
         </div>
     </nav>
     <div class="content">
