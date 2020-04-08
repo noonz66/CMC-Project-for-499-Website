@@ -17,7 +17,7 @@ if (!isset($_POST['username'], $_POST['password'])) {
     exit('Please fill both the username and password fields!');
 }
 // Prepare our SQL, preparing the SQL statement will prevent SQL injection.
-if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
+if ($stmt = $con->prepare('SELECT id, password, full_name FROM accounts WHERE username = ?')) {
     // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
     $stmt->bind_param('s', $_POST['username']);
     $stmt->execute();
@@ -25,7 +25,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id, $password);
+        $stmt->bind_result($id, $password, $full_name);
         $stmt->fetch();
         // Account exists, now we verify the password.
         if ($_POST['password'] === $password) {
@@ -35,6 +35,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
             $_SESSION['id'] = $id;
+            $_SESSION['fname'] = $full_name;
             header('Location: ../php/home.php');
         } else {
             echo 'Incorrect password!';
