@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 03, 2020 at 05:59 PM
--- Server version: 10.4.10-MariaDB
--- PHP Version: 7.3.12
+-- Host: localhost
+-- Generation Time: Apr 08, 2020 at 11:05 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -36,6 +35,26 @@ CREATE TABLE `about` (
   `map` text NOT NULL,
   `social_media` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `accounts`
+--
+
+CREATE TABLE `accounts` (
+  `id` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `accounts`
+--
+
+INSERT INTO `accounts` (`id`, `username`, `password`, `email`) VALUES
+(1, 'test', 'Test', 'test@test.com');
 
 -- --------------------------------------------------------
 
@@ -134,6 +153,12 @@ ALTER TABLE `about`
   ADD UNIQUE KEY `seqNo` (`seqNo`);
 
 --
+-- Indexes for table `accounts`
+--
+ALTER TABLE `accounts`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `events_info`
 --
 ALTER TABLE `events_info`
@@ -166,6 +191,12 @@ ALTER TABLE `surveys_info`
 --
 ALTER TABLE `about`
   MODIFY `seqNo` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `accounts`
+--
+ALTER TABLE `accounts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `events_info`
