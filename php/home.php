@@ -6,6 +6,18 @@ if (!isset($_SESSION['loggedin'])) {
     header('Location: ../pages/index.html');
     exit;
 }
+//auto logout after set amount of time
+$autologout = 3600; //set autologout time, in seconds
+$lastactive = $_SESSION['timestamp'] ?? 0; // Use of 'Null Coalescing Operator' - pulls the timestamp or sets it to 0.
+if (time() - $lastactive > $autologout) {
+    $_SESSION = array();                   // Clear the session data
+    setcookie(session_name(), false, time() - 3600);     // Clear the cookie
+    session_destroy();                              // Destroy the session data
+    header('Location: ../pages/index.html');
+    exit;
+} else {
+    $_SESSION['timestamp'] = time();              //Or reset the timestamp
+}
 ?>
 <!DOCTYPE html>
 <html>

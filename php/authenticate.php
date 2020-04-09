@@ -36,6 +36,7 @@ if ($stmt = $con->prepare('SELECT id, password, full_name FROM accounts WHERE us
             $_SESSION['name'] = $_POST['username'];
             $_SESSION['id'] = $id;
             $_SESSION['fname'] = $full_name;
+            $_SESSION['timestamp'] = time();
             header('Location: ../php/home.php');
         } else {
             echo 'Incorrect password!';
