@@ -15,6 +15,8 @@ if (!isset($_SESSION['loggedin'])) {
     <title>Home Page</title>
     <link href="../css/homestyle.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/04dee08355.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 
 <body class="loggedin">
@@ -29,10 +31,17 @@ if (!isset($_SESSION['loggedin'])) {
     </nav>
     <div class="content">
         <h2>Dashboard</h2>
-        <p>Welcome back, <?= $_SESSION['fname'] ?>!
-            <br><br><br>
-            Please select below which page you want to edit by clicking on one of the icons below.
-        </p>
+        <p>Welcome back, <?= $_SESSION['fname'] ?>!</p>
+    </div>
+    <div class="content">
+        <div>
+            <div class="shortcuts">
+                <a href="" class="shortcut"><img class="imgsize" src="../assets/icons/news.svg" alt="News Icon"><span class="shortcut-label">أخبار</span> </a>
+                <a href="" class="shortcut"><img class="imgsize" src="../assets/icons/project.svg" alt="Projects Icon"><span class="shortcut-label">مشاريع</span> </a>
+                <a href="" class="shortcut"><img class="imgsize" src="../assets/icons/members.svg" alt="Council Members Icon"><span class="shortcut-label">أعضاء المجلس</span> </a>
+                <a href="" class="shortcut"><img class="imgsize" src="../assets/icons/aboutus.svg" alt="About Us Icon"><span class="shortcut-label">معلومات عنا</span> </a>
+            </div>
+        </div>
     </div>
     <div class="footer">
         <p>&copy Capital Municipal Council of Bahrain</p>

@@ -103,3 +103,52 @@ body.loggedin {
     color: white;
     text-align: center;
 }
+
+
+/* Dashboard */
+
+.shortcuts {
+    text-align: center;
+}
+
+.shortcuts .shortcut {
+    width: 22.50%;
+    display: inline-block;
+    padding: 12px 0;
+    margin: 0 .9% 1em;
+    vertical-align: top;
+    text-decoration: none;
+    background: #ac3236;
+    border-radius: 5px;
+}
+
+.shortcuts .shortcut .shortcut-icon {
+    margin-top: .25em;
+    margin-bottom: .25em;
+    font-size: 32px;
+    color: #fff;
+}
+
+.shortcuts .shortcut:hover {
+    background: #d7babb;
+}
+
+.shortcuts .shortcut:hover span {
+    color: #fff;
+}
+
+.shortcuts .shortcut:hover .shortcut-icon {
+    color: #d7babb;
+}
+
+.shortcuts .shortcut-label {
+    display: block;
+    font-weight: 400;
+    color: #fff;
+    font-size: 30px;
+}
+
+.imgsize {
+    width: 80px;
+    height: 80px;
+}
