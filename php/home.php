@@ -49,7 +49,7 @@ if (time() - $lastactive > $autologout) {
         <div>
             <div class="shortcuts">
                 <a href="" class="shortcut"><img class="imgsize" src="../assets/icons/news.svg" alt="News Icon"><span class="shortcut-label">أخبار</span> </a>
-                <a href="" class="shortcut"><img class="imgsize" src="../assets/icons/project.svg" alt="Projects Icon"><span class="shortcut-label">مشاريع</span> </a>
+                <a href="../php/project.php" class="shortcut"><img class="imgsize" src="../assets/icons/project.svg" alt="Projects Icon"><span class="shortcut-label">مشاريع</span> </a>
                 <a href="" class="shortcut"><img class="imgsize" src="../assets/icons/members.svg" alt="Council Members Icon"><span class="shortcut-label">أعضاء المجلس</span> </a>
                 <a href="" class="shortcut"><img class="imgsize" src="../assets/icons/aboutus.svg" alt="About Us Icon"><span class="shortcut-label">معلومات عنا</span> </a>
             </div>
