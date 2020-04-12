@@ -29,54 +29,71 @@ if (time() - $lastactive > $autologout) {
 	</head>
 		
 	<body>
-		<ul>
-            <li><a href="#addProject">إضافة مشروع</a></li>
-            <li><a href="#info">معلومات عامة</a></li>
-            <li><a href="#range">نطاق المشروع</a></li>
-            <li><a href="#state">حالة الشروع</a></li>
-        </ul> 
-        <br>
-        <div class="page">
-            <form action="../php/projectsActivity.php" method="post" enctype="multipart/form-data">
+        <header>
+            <nav class="navtop">
+                <div>
+                    <a href="../php/home.php">
+                        <img class="whiteback" src="../assets/logo.svg" alt="Capital Municipal Council" width="50px" height="50px">
+                        <h1>Capital Municipal Council of Bahrain</h1>
+                    </a>
+                    <a href="../php/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                </div>
+            </nav>
+
+            <ul>
+                <li><a href="#addProject">إضافة مشروع</a></li>
+                <li><a href="#info">معلومات عامة</a></li>
+                <li><a href="#range">نطاق المشروع</a></li>
+                <li><a href="#state">حالة الشروع</a></li>
+            </ul> 
+        </header>
+        
+        <main>
+            <div class="page">
+                <form action="../php/projectsActivity.php" method="post" enctype="multipart/form-data">
+                    
+                    <h3 id="addProject">إضافة مشروع</h3>
+                    <label>عنوان المشروع</label><br>
+                    <input type="text" name="project" placeholder="عنوان المشروع" id="project" required>
+                    <br>
+                    <hr id="info"class="style-one">
+
+                    <h3>معلومات عامة</h3>
+                    <label>وصف المشروع</label><br>
+                    <input type="textarea" name="desc" placeholder="وصف المشروع" id="desc" required>
+                    <br>
+                    <br>
+                    <label>ارفق صورة</label><br>
+                    <input type="file" name="descImage" id="descImage">
+                    <br>
+                    <hr class="style-one">
+
+                    <h3 id="range">نطاق المشروع</h3>
+                    <label>نطاق المشروع</label><br>
+                    <input type="textarea" name="range" placeholder="نطاق المشروع" id="range" required>
+                    <br>
+
+                    <h3 id="state">حالة المشروع</h3>
+                    <label>حالة المشروع</label><br>
+                    <input type="textarea" name="state" placeholder="حالة المشروع" id="state" required>
+                    <br>
+                    
+
+                    <label>ارفق صورة</label><br>
+                    <input type="file" name="mapImage" id="mapImage">
+                    <br>
+                    <hr class="style-one">
+
+                    <input type="submit" value="إرسال" name="submit">
                 
-                <h3 id="addProject">إضافة مشروع</h3>
-                <label>عنوان المشروع</label><br>
-                <input type="text" name="project" placeholder="عنوان المشروع" id="project" required>
-                <br>
-                <hr id="info"class="style-one">
-
-                <h3>معلومات عامة</h3>
-                <label>وصف المشروع</label><br>
-                <input type="textarea" name="desc" placeholder="وصف المشروع" id="desc" required>
-                <br>
-                <br>
-                <label>ارفق صورة</label><br>
-                <input type="file" name="descImage" id="descImage">
-                <br>
-                <hr class="style-one">
-
-                <h3 id="range">نطاق المشروع</h3>
-                <label>نطاق المشروع</label><br>
-                <input type="textarea" name="range" placeholder="نطاق المشروع" id="range" required>
-                <br>
-
-                <h3 id="state">حالة المشروع</h3>
-                <label>حالة المشروع</label><br>
-                <input type="textarea" name="state" placeholder="حالة المشروع" id="state" required>
-                <br>
-                
-
-                <label>ارفق صورة</label><br>
-                <input type="file" name="mapImage" id="mapImage">
-                <br>
-                <hr class="style-one">
-
-                <input type="submit" value="إرسال" name="submit">
-            
-            </form>
-        </div>
-		
-		
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+                <p>&copy Capital Municipal Council of Bahrain</p>
+            </div>	
+        </footer>
 	</body>	
 
 </html>
