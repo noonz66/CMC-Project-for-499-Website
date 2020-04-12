@@ -1,0 +1,121 @@
+*{
+    direction: rtl;
+}
+body{
+    background-color: #f3f4f7;
+}
+.content div{
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 10px;
+    border-color: #ac3236;
+    padding: 20px;
+    width:200px;
+    background-color: white;
+}
+.forms>h2 {
+    margin-bottom: 25px;
+    padding: 0;
+    font-size: 22px;
+    border-bottom: 1px solid #e0e0e3;
+    color: #ac3236;
+    text-align: center;
+}
+#display tr:first-child{
+    font-weight: bold;
+    background-color: #ac3236;
+    color: white;
+    padding-right: 15px;
+    font-size: 20px;
+}
+#display{
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    border-color: #ac3236;
+    width: 800px;
+    position: relative;
+    text-align: center;
+    padding: 5px;
+    width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+.forms{
+    display: none;
+    font-size: 14px;
+    border-style: solid;
+    border-color: #ac3236;
+    border-width: 5px;
+    border-radius: 10px;
+    width:800px;
+    text-align: right;
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    align-items: center;
+    padding: 50px;
+}
+tr  td{
+    border-style: solid;
+    border-width: 2 px;
+    border-color: #ac3236;
+    padding: 10px;
+    
+}
+
+.forms  p{
+    color: #ac3236;
+    padding-right: 15px;
+    width: 500px;
+}
+td  p{
+    word-break: keep-all;
+    margin: 20px auto
+}
+
+label{
+    font-weight: bold;
+    background-color: #ac3236;
+    color: white;  
+    width: 200px;
+    height:50px;
+    border-width:5px;
+    border-style: solid;
+    border-color: #ac3236;
+    text-align: center;
+}
+
+input[type=text] {
+    width:50%;
+  }
+    
+input[type=textarea] {   
+    border-radius: 4px;
+    resize: both;   
+    width: 100%; 
+    position: inline;
+  }
+input[type=submit]{
+    margin-right: 300px;
+    margin-top: 30px;
+    margin-bottom: 0;
+  
+}
+input[type=submit], button{
+    background-color: #ac3236;
+    color: white;
+    border:2px solid #ccc;
+    padding: 10px 24px;
+    transition-duration: 0.4s;
+    
+  }
+  
+input[type=submit]:hover,  button:hover {
+    padding: 10px 24px;
+    border:2px solid #ac3236;
+    background-color: white ;
+    color: #ac3236;
+}
+
+
