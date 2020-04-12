@@ -91,7 +91,7 @@ $result = $mysqli->query($query);
                 <img class="whiteback" src="../assets/logo.svg" alt="Capital Municipal Council of Bahrain Logo" width="50px" height="50px">
                 <h1>مجلس أمانة العاصمة البحرين</h1>
             </a>
-            <a href="../php/logout.php"><i class="fas fa-sign-out-alt"></i>تسجيل خروج</a>
+            <a href="../php/logout.php"><i class="fas fa-sign-out-alt"></i>خروج</a>
         </div>
     </nav>
     <div class="content">
