@@ -20,7 +20,7 @@ if (time() - $lastactive > $autologout) {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html class="righttoleft">
 
 <head>
     <meta charset="utf-8">
@@ -35,15 +35,15 @@ if (time() - $lastactive > $autologout) {
     <nav class="navtop">
         <div>
             <a href="../php/home.php">
-                <img class="whiteback" src="../assets/logo.svg" alt="Capital Municipal Council" width="50px" height="50px">
-                <h1>Capital Municipal Council of Bahrain</h1>
+                <img class="whiteback" src="../assets/logo.svg" alt="Capital Municipal Council of Bahrain Logo" width="50px" height="50px">
+                <h1>مجلس أمانة العاصمة البحرين</h1>
             </a>
-            <a href="../php/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+            <a href="../php/logout.php"><i class="fas fa-sign-out-alt"></i>تسجيل خروج</a>
         </div>
     </nav>
     <div class="content">
-        <h2>Dashboard</h2>
-        <p>Welcome back, <?= $_SESSION['fname'] ?>!</p>
+        <h2 class="dashboardtitle">لوحة القيادة</h2>
+        <p class="lefttoright">Welcome back, <?= $_SESSION['fname'] ?>!</p>
     </div>
     <div class="content">
         <div>
@@ -51,12 +51,12 @@ if (time() - $lastactive > $autologout) {
                 <a href="" class="shortcut"><img class="imgsize" src="../assets/icons/news.svg" alt="News Icon"><span class="shortcut-label">أخبار</span> </a>
                 <a href="../php/project.php" class="shortcut"><img class="imgsize" src="../assets/icons/project.svg" alt="Projects Icon"><span class="shortcut-label">مشاريع</span> </a>
                 <a href="" class="shortcut"><img class="imgsize" src="../assets/icons/members.svg" alt="Council Members Icon"><span class="shortcut-label">أعضاء المجلس</span> </a>
-                <a href="" class="shortcut"><img class="imgsize" src="../assets/icons/aboutus.svg" alt="About Us Icon"><span class="shortcut-label">معلومات عنا</span> </a>
+                <a href="AboutUs.php" class="shortcut"><img class="imgsize" src="../assets/icons/aboutus.svg" alt="About Us Icon"><span class="shortcut-label">معلومات عنا</span> </a>
             </div>
         </div>
     </div>
     <div class="footer">
-        <p>&copy Capital Municipal Council of Bahrain</p>
+        <p>مجلس أمانة العاصمة البحرين &copy</p>
     </div>
 </body>
 

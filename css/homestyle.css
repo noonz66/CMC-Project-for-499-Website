@@ -1,3 +1,12 @@
+.righttoleft {
+    direction: rtl !important;
+    unicode-bidi: bidi-override !important;
+    direction: unset !important;
+}
+
+
+/* Navigation Top Bar */
+
 .whiteback {
     align-items: center;
     text-align: center;
@@ -12,6 +21,7 @@
     height: 60px;
     width: 100%;
     border: 0;
+    direction: rtl;
 }
 
 .navtop div {
@@ -29,9 +39,9 @@
 
 .navtop div h1 {
     flex: 1;
-    font-size: 24px;
-    padding-left: 50px;
-    padding-right: 300px;
+    font-size: 30px;
+    padding-right: 50px;
+    padding-left: 300px;
     margin: 0;
     color: #eaebed;
     font-weight: normal;
@@ -41,11 +51,12 @@
     padding: 0 20px;
     text-decoration: none;
     color: #eaebed;
-    font-weight: bold;
+    font-size: 18px;
 }
 
 .navtop div a i {
     padding: 2px 8px 0 0;
+    padding-left: 10px;
 }
 
 .navtop div a:hover {
@@ -59,14 +70,26 @@ body.loggedin {
 .content {
     width: 1000px;
     margin: 0 auto;
+    direction: rtl;
 }
 
 .content h2 {
     margin: 0;
     padding: 25px 0;
-    font-size: 22px;
+    font-size: 36px;
     border-bottom: 1px solid #e0e0e3;
     color: #ac3236;
+}
+
+.lefttoright {
+    direction: ltr !important;
+    unicode-bidi: bidi-override !important;
+}
+
+.dashboardtitle {
+    text-align: center;
+    margin: 0 auto;
+    font-weight: bold;
 }
 
 .content>p,
@@ -102,6 +125,7 @@ body.loggedin {
     background-color: #ac3236;
     color: white;
     text-align: center;
+    font-size: 20px;
 }
 
 
