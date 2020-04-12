@@ -2,6 +2,7 @@
     direction: rtl !important;
     unicode-bidi: bidi-override !important;
     direction: unset !important;
+    text-align: right;
 }
 
 
