@@ -20,7 +20,7 @@ if (time() - $lastactive > $autologout) {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html class="righttoleft">
 
 <head>
     <meta charset="utf-8">
@@ -35,15 +35,15 @@ if (time() - $lastactive > $autologout) {
     <nav class="navtop">
         <div>
             <a href="../php/home.php">
-                <img class="whiteback" src="../assets/logo.svg" alt="Capital Municipal Council" width="50px" height="50px">
-                <h1>Capital Municipal Council of Bahrain</h1>
+                <img class="whiteback" src="../assets/logo.svg" alt="Capital Municipal Council of Bahrain Logo" width="50px" height="50px">
+                <h1>مجلس أمانة العاصمة البحرين</h1>
             </a>
-            <a href="../php/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+            <a href="../php/logout.php"><i class="fas fa-sign-out-alt"></i>تسجيل خروج</a>
         </div>
     </nav>
     <div class="content">
-        <h2>Dashboard</h2>
-        <p>Welcome back, <?= $_SESSION['fname'] ?>!</p>
+        <h2 class="dashboardtitle">لوحة القيادة</h2>
+        <p class="lefttoright">Welcome back, <?= $_SESSION['fname'] ?>!</p>
     </div>
     <div class="content">
         <div>
@@ -56,7 +56,7 @@ if (time() - $lastactive > $autologout) {
         </div>
     </div>
     <div class="footer">
-        <p>&copy Capital Municipal Council of Bahrain</p>
+        <p>مجلس أمانة العاصمة البحرين &copy</p>
     </div>
 </body>
 
