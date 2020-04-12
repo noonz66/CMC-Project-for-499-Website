@@ -73,13 +73,14 @@ td  p{
     word-break: keep-all;
     margin: 20px auto
 }
-#btnBack{
+.btnBack{
     display: none;
     background-image:url("../assets/icons/back.png");
     width: 50px;
     border: none;
+    margin-left: 10px;
 }
-#btnBack:hover{
+.btnBack:hover{
     border:none;
     background-color: #ac3236 ;
     color: white;

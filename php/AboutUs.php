@@ -81,7 +81,7 @@ if (time() - $lastactive > $autologout) {
         var del = document.getElementById("delete");
         var ins = document.getElementById("insert");
         var edit = document.getElementById("edit");
-        var back = document.getElementById("btnBack");
+        var back = document.getElementsByClassName("ButtonDiv");
         var table = document.getElementById("display");
 
         if (table.style.display === "none") {
@@ -109,7 +109,6 @@ if (time() - $lastactive > $autologout) {
     <body>        
         <nav class="navtop">
             <div>
-                <button id="btnBack" onclick="back()"></button>
                 <a href="../php/home.php">
                     <img class="whiteback" src="../assets/logo.svg" alt="Capital Municipal Council" width="50px" height="50px">
                     <h1>Capital Municipal Council of Bahrain</h1>
@@ -122,9 +121,9 @@ if (time() - $lastactive > $autologout) {
         </div>   
         <?php include('About/MyTable.php'); ?>  
         <div id="Edit" class="forms">
+            <div class="ButtonDiv"><button id="btnBack" onclick="back()"></button></div>
             <h2>Edit About Us Table</h3>
             <form action="About/update.php" method="post" id="editForm">  
-    
                     <label> الرقم التسلسلي:
                     </label>
                          <input name ="seqNo" required>  
@@ -155,6 +154,7 @@ if (time() - $lastactive > $autologout) {
             </form>      
         </div>
         <div id="insert" class="forms">
+            <div class="ButtonDiv"><button id="btnBack" onclick="back()"></button></div>
             <h2>Insert a New Row into About Us Table</h3>
             <form action="About/insert.php" method="post" id="insertForm">                     
                     <label> الرقم التسلسلي:
@@ -186,6 +186,7 @@ if (time() - $lastactive > $autologout) {
             </form>      
         </div>
         <div id="delete" class="forms">
+        <div class="ButtonDiv"><button id="btnBack" onclick="back()"></button></div>
             <h2>Delete a Row in About Us Table</h2>
             <p> اكتب الرفم التسلسلي للسجل الذي تريد إزالته:</p>
             <form action="About/delete.php" method="post" id="deleteForm">                     
