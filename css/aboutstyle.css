@@ -73,7 +73,17 @@ td  p{
     word-break: keep-all;
     margin: 20px auto
 }
-
+#btnBack{
+    display: none;
+    background-image:url("../assets/icons/back.png");
+    width: 50px;
+    border: none;
+}
+#btnBack:hover{
+    border:none;
+    background-color: #ac3236 ;
+    color: white;
+}
 label{
     font-weight: bold;
     background-color: #ac3236;

@@ -38,19 +38,25 @@ if (time() - $lastactive > $autologout) {
     function edit() {
         var x = document.getElementById("Edit");
         var table = document.getElementById("display");
+        var back = document.getElementById("btnBack");
+
         if (x.style.display === "none") {
             x.style.display = "block";
             table.style.display = "none";
+            back.style.display = "block";
 
         } else {
             x.style.display = "none";
         }
     }
     function insert() {
-    var x = document.getElementById("insert");
-    var table = document.getElementById("display");
+         var x = document.getElementById("insert");
+        var table = document.getElementById("display");
+        var back = document.getElementById("btnBack");
+
         if (x.style.display === "none") {
             x.style.display = "block";
+            back.style.display = "block";
             table.style.display = "none";
 
         } else {
@@ -59,13 +65,33 @@ if (time() - $lastactive > $autologout) {
     }
     function deleteRow(){
         var x = document.getElementById("delete");
+        var back = document.getElementById("btnBack");
         var table = document.getElementById("display");
+
         if (x.style.display === "none") {
             x.style.display = "block";
+            back.style.display = "block";
             table.style.display = "none";
 
         } else {
             x.style.display = "none";
+        }
+    }
+    function back(){
+        var del = document.getElementById("delete");
+        var ins = document.getElementById("insert");
+        var edit = document.getElementById("edit");
+        var back = document.getElementById("btnBack");
+        var table = document.getElementById("display");
+
+        if (table.style.display === "none") {
+            table.style.display = "table";
+            del.style.display = "none";
+            ins.style.display = "none";
+            edit.style.display = "none";
+            back.style.display = "none";
+        } else {
+            table.style.display = "none";
         }
     }
 </script>
@@ -83,11 +109,12 @@ if (time() - $lastactive > $autologout) {
     <body>        
         <nav class="navtop">
             <div>
+                <button id="btnBack" onclick="back()"></button>
                 <a href="../php/home.php">
                     <img class="whiteback" src="../assets/logo.svg" alt="Capital Municipal Council" width="50px" height="50px">
                     <h1>Capital Municipal Council of Bahrain</h1>
                 </a>
-                 <!--  <a href="../php/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a> -->
+                 <a href="../php/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
             </div>
         </nav>
         <div class="content">
