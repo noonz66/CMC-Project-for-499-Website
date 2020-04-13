@@ -17,15 +17,12 @@ if (mysqli_connect_errno()) {
 //if (isset($_POST['title']) && isset($_POST['date']) && isset($_POST['body']) && isset($_POST['image']) ) {
 
 //if (!isset($_POST['title'])){
-   
+
 //}else{
- //   echo "missing title!!";
+//   echo "missing title!!";
 //}
-if(isset($_POST['btn'])){
-
-
-    
-}else{
+if (isset($_POST['btn'])) {
+} else {
     echo "Please fill !!";
 }
 $FName = $_POST['FName'];
@@ -36,7 +33,7 @@ $email = $_POST['email'];
 $position = $_POST['position'];
 
 //if (isset($_POST['title'], $_POST['date'],$_POST['body'])) {
-    // Could not get the data that should have been sent.
+// Could not get the data that should have been sent.
 
 //exit('Please fill both the username and password fields!');
 //}
@@ -45,13 +42,13 @@ $position = $_POST['position'];
 
 
 
-   // echo "Done";
+// echo "Done";
 //}else{
- //   echo "Missing something";
+//   echo "Missing something";
 //}
-$sql="insert into member (FName,LName,Image,phone_no,email,position) values('$FName','$LName','$Image','$phone_no','$email','$position')";
-$result = $conn ->query($sql);
-header('Location:http://localhost:8080/CMC-Project-for-499-Website-master/php/member.php');
+$sql = "insert into member (FName,LName,Image,phone_no,email,position) values('$FName','$LName','$Image','$phone_no','$email','$position')";
+$result = $conn->query($sql);
+header('Location: ../php/member.php');
 
 
 
