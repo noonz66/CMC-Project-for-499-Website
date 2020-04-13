@@ -26,6 +26,5 @@
     $mysqli->query($query);
     $mysqli->close();
 
-    header('Location: AboutUs.php');
+    header('Location: ../php/AboutUs.php');
     exit();
-?>
