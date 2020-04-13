@@ -38,12 +38,11 @@ $result = $mysqli->query($query);
     function edit() {
         var x = document.getElementById("Edit");
         var table = document.getElementById("display");
-        var back = document.getElementById("btnBack");
 
         if (x.style.display === "none") {
-            x.style.display = "block";
             table.style.display = "none";
-            back.style.display = "block";
+            
+            x.style.display = "block";
 
         } else {
             x.style.display = "none";
@@ -51,161 +50,50 @@ $result = $mysqli->query($query);
     }
 
     function insert() {
-<<<<<<< HEAD
-         var x = document.getElementById("insert");
-        var table = document.getElementById("display");
-        var back = document.getElementById("btnBack");
-
-=======
         var x = document.getElementById("insert");
-        var table = document.getElementById("display");
->>>>>>> 8416a821596070302edc84e4ae2b160c0a385b33
+        var table = document.getElementsById("display");
+
         if (x.style.display === "none") {
-            x.style.display = "block";
-            back.style.display = "block";
             table.style.display = "none";
 
-        } else {
+            x.style.display = "block";
+
+
+        } 
+        else {
             x.style.display = "none";
         }
     }
 
-    function deleteRow() {
+    function deleteRow(){
         var x = document.getElementById("delete");
-        var back = document.getElementById("btnBack");
         var table = document.getElementById("display");
+        var b = document.getElementById("btnBack");
 
-        if (x.style.display === "none") {
-            x.style.display = "block";
-            back.style.display = "block";
+        if (x.style.display === "none"){
             table.style.display = "none";
 
-        } else {
+            x.style.display = "block";
+           b.style.visibility = "visible";
+           
+        } 
+        else {
             x.style.display = "none";
         }
     }
     function back(){
-        var del = document.getElementById("delete");
-        var ins = document.getElementById("insert");
-        var edit = document.getElementById("edit");
-        var back = document.getElementsByClassName("ButtonDiv");
+        var d = document.getElementById("delete");
+        var back = document.getElementsByClassName("backDiv");
         var table = document.getElementById("display");
+    
+            forms.style.display = "none";
 
-        if (table.style.display === "none") {
-            table.style.display = "table";
-            del.style.display = "none";
-            ins.style.display = "none";
-            edit.style.display = "none";
-            back.style.display = "none";
-        } else {
-            table.style.display = "none";
-        }
+            table.style.display = "inline";
+
     }
 </script>
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
-    <head>    
-        <meta charset="utf-8">
-        <title>معلومات عنا</title>
-        <script src="https://kit.fontawesome.com/04dee08355.js" crossorigin="anonymous"></script>
-        <link href="../css/homestyle.css" rel="stylesheet" type="text/css">
-        <link href="../css/aboutstyle.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    </head>
-    <body>        
-        <nav class="navtop">
-            <div>
-                <a href="../php/home.php">
-                    <img class="whiteback" src="../assets/logo.svg" alt="Capital Municipal Council" width="50px" height="50px">
-                    <h1>Capital Municipal Council of Bahrain</h1>
-                </a>
-                 <a href="../php/logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
-            </div>
-        </nav>
-        <div class="content">
-            <h2>About Us Table</h2>
-        </div>   
-        <?php include('About/MyTable.php'); ?>  
-        <div id="Edit" class="forms">
-            <div class="ButtonDiv"><button id="btnBack" onclick="back()"></button></div>
-            <h2>Edit About Us Table</h3>
-            <form action="About/update.php" method="post" id="editForm">  
-                    <label> الرقم التسلسلي:
-                    </label>
-                         <input name ="seqNo" required>  
-                    <br>  
-                    <br>                   
-                    <label> من نحن:
-                    </label>
-                         <textarea name ="who_we_are" cols="100" rows="4" required></textarea>   
-                    <br>
-                    <label>  الرؤية:
-                    </label>                                                     
-                             <textarea type="text" name ="vision" cols="100" rows="4" required></textarea>    
-                    <br>   
-                    <label> المهمة:
-                    </label>
-                        <textarea type="text" name ="mission" cols="100" rows="4" required></textarea>                    
-                    <br>   
-                    <label> القيم المؤسسية:
-                    </label>
-                        <textarea type="text" name ="our_values" cols="100" rows="4" required></textarea>                    
-                    <br>   
-                    <label>الأهداف الاستراتيجية:
-                    </label>                       
-                     
-                    <textarea type="text" name ="goals" cols="100" rows="4" required></textarea>                    
-                    <br> 
-                    <input type="submit" value="Edit"/>  
-            </form>      
-        </div>
-        <div id="insert" class="forms">
-            <div class="ButtonDiv"><button id="btnBack" onclick="back()"></button></div>
-            <h2>Insert a New Row into About Us Table</h3>
-            <form action="About/insert.php" method="post" id="insertForm">                     
-                    <label> الرقم التسلسلي:
-                    </label>
-                         <input name ="seqNo" required>  
-                    <br><br>                    
-                    <label> من نحن:
-                    </label>
-                         <textarea name ="who_we_are" cols="100" rows="4" required></textarea>   
-                    <br>
-                    <label>  الرؤية:
-                    </label>                                                     
-                             <textarea type="text" name ="vision" cols="100" rows="4" required></textarea>    
-                    <br>   
-                    <label> المهمة:
-                    </label>
-                        <textarea type="text" name ="mission" cols="100" rows="4" required></textarea>                    
-                    <br>   
-                    <label> القيم المؤسسية:
-                    </label>
-                        <textarea type="text" name ="our_values" cols="100" rows="4" required></textarea>                    
-                    <br>   
-                    <label>الأهداف الاستراتيجية:
-                    </label>                       
-                     
-                    <textarea type="text" name ="goals" cols="100" rows="4" required></textarea>                    
-                    <br> 
-                    <input type="submit" value="Insert"/>  
-            </form>      
-        </div>
-        <div id="delete" class="forms">
-        <div class="ButtonDiv"><button id="btnBack" onclick="back()"></button></div>
-            <h2>Delete a Row in About Us Table</h2>
-            <p> اكتب الرفم التسلسلي للسجل الذي تريد إزالته:</p>
-            <form action="About/delete.php" method="post" id="deleteForm">                     
-                 
-                    <label> الرقم التسلسلي:
-                    </label>
-                         <input name ="seqNo" required>  
-                    <br> 
-                    <input type="submit" value="Delete"/>
-=======
-
 <head>
     <meta charset="utf-8">
     <title>معلومات عنا</title>
@@ -227,11 +115,12 @@ $result = $mysqli->query($query);
         </div>
     </nav>
     <div class="content">
-        <h2>About Us Table</h2>
+        <h2>معلومات عنا</h2>
     </div>
     <?php include('About/MyTable.php'); ?>
     <div id="Edit" class="forms">
-        <h2>Edit About Us Table</h3>
+        <div class="backDiv"><button class="btnBack" onclick="back()"></button></div>
+        <h2>تغيير سجل معلومات عنا</h3>
             <form action="About/update.php" method="post" id="editForm">
 
                 <label> الرقم التسلسلي:
@@ -261,11 +150,11 @@ $result = $mysqli->query($query);
                 <textarea type="text" name="goals" cols="100" rows="4" required></textarea>
                 <br>
                 <input type="submit" value="Edit" />
->>>>>>> 8416a821596070302edc84e4ae2b160c0a385b33
             </form>
     </div>
     <div id="insert" class="forms">
-        <h2>Insert a New Row into About Us Table</h3>
+    <div class="backDiv"><button class="btnBack" onclick="back()"></button></div>
+        <h2>ادخل الى السجل</h3>
             <form action="About/insert.php" method="post" id="insertForm">
                 <label> الرقم التسلسلي:
                 </label>
@@ -296,7 +185,8 @@ $result = $mysqli->query($query);
             </form>
     </div>
     <div id="delete" class="forms">
-        <h2>Delete a Row in About Us Table</h2>
+    <button id="btnBack" onclick="back()"></button>
+        <h2>حذف من السجل</h2>
         <p> اكتب الرفم التسلسلي للسجل الذي تريد إزالته:</p>
         <form action="About/delete.php" method="post" id="deleteForm">
 
