@@ -1,8 +1,5 @@
 .righttoleft {
     direction: rtl !important;
-    unicode-bidi: bidi-override !important;
-    direction: unset !important;
-    text-align: right;
 }
 
 
@@ -71,7 +68,6 @@ body.loggedin {
 .content {
     width: 1000px;
     margin: 0 auto;
-    direction: rtl;
 }
 
 .content h2 {
