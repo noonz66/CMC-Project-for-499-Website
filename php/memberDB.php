@@ -5,7 +5,7 @@
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
-$DATABASE_NAME = 'pcDb';
+$DATABASE_NAME = 'cmc';
 // Try and connect using the info above.
 $conn = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 $conn->set_charset('utf8');

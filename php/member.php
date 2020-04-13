@@ -60,7 +60,7 @@ if (time() - $lastactive > $autologout) {
               <input name="position" type="text" class="validate[required,custom[onlynumber],length[1,15]] feedback-input" placeholder="المنصب" id="postion" />
             </p>
             <p class="number">
-              <input name="phone_no" type="number" class="validate[required,custom[onlynumber],length[1,8]] feedback-input" placeholder="الرقم" id="number" />
+              <input name="phone_no" type="text" class="validate[required,custom[onlynumber],length[1,8]] feedback-input" placeholder="الرقم" id="number" />
             </p>
             <p class="email">
               <input name="email" type="email" class="validate[required,custom[email]] feedback-input" id="email" placeholder="البريد الاكتروني" />
