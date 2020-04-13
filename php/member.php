@@ -42,7 +42,7 @@ if (time() - $lastactive > $autologout) {
       <a href="../php/logout.php"><i class="fas fa-sign-out-alt"></i>خروج</a>
     </div>
   </nav>
-  <form action="memberDB.php" method="POST">
+  <form action="memberDB.php" method="POST" enctype="multipart/form-data">
     <div class="content">
       <h2 class="dashboardtitle">أعضاء</h2>
     </div>
@@ -67,10 +67,10 @@ if (time() - $lastactive > $autologout) {
             </p>
             <p class="chickbox">
               <td> الصورة</td>
-              <input name="Image" type="file" id="chickbox" />
+              <input name="Image" type="file" id="Image" />
             </p>
             <div class="submit">
-              <input type="submit" value="حفظ البيانات" id="button-blue" />
+              <input type="submit" value="حفظ البيانات" id="button-blue" name="submit" />
               <div class="ease"></div>
             </div>
           </form>
