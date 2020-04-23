@@ -50,7 +50,8 @@ if (time() - $lastactive > $autologout) {
                 <li><a href="#addProject">إضافة مشروع</a></li>
                 <li><a href="#info">معلومات عامة</a></li>
                 <li><a href="#range">نطاق المشروع</a></li>
-                <li><a href="#state">حالة الشروع</a></li>
+                <li><a href="#state">حالة المشروع</a></li>
+                <li><a href="projectTable.php">إظهار جدول المشروع</a></li>
             </ul>
         </div>
     </header>
