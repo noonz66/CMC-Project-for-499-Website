@@ -20,66 +20,60 @@ if (time() - $lastactive > $autologout) {
     $_SESSION['timestamp'] = time();              //Or reset the timestamp
 }
 
-$username = "root";
-$password = "";
-$database = "cmc";
-
-$mysqli = new mysqli("localhost", $username, $password, $database);
-
-// Check connection
-if ($mysqli->connect_error) {
-    die("Connection failed: " . $mysqli->connect_error);
-}
-$query = "SELECT * FROM about";
-$result = $mysqli->query($query);
-
 ?>
 <script>
     function edit() {
         var x = document.getElementById("Edit");
         var table = document.getElementById("display");
+
         if (x.style.display === "none") {
+            table.style.display = "none";            
             x.style.display = "block";
-            table.style.display = "none";
 
         } else {
             x.style.display = "none";
         }
     }
 
-    function insert() {
+    function insert(){
         var x = document.getElementById("insert");
         var table = document.getElementById("display");
-        if (x.style.display === "none") {
-            x.style.display = "block";
-            table.style.display = "none";
 
-        } else {
+        if (x.style.display === "none") {
+            table.style.display = "none";
+            x.style.display = "block";
+        } 
+        else {
             x.style.display = "none";
         }
     }
 
-    function deleteRow() {
+    function deleteRow(){
         var x = document.getElementById("delete");
         var table = document.getElementById("display");
-        if (x.style.display === "none") {
-            x.style.display = "block";
+
+        if (x.style.display === "none"){
             table.style.display = "none";
 
-        } else {
+            x.style.display = "block";
+         
+           
+        } 
+        else {
             x.style.display = "none";
         }
     }
+    
 </script>
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>معلومات عنا</title>
     <script src="https://kit.fontawesome.com/04dee08355.js" crossorigin="anonymous"></script>
     <link href="../css/homestyle.css" rel="stylesheet" type="text/css">
     <link href="../css/aboutstyle.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../css/tablestyle.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
@@ -95,83 +89,81 @@ $result = $mysqli->query($query);
         </div>
     </nav>
     <div class="content">
-        <h2>About Us Table</h2>
+        <h2>معلومات عنا</h2>
     </div>
-    <?php include('About/MyTable.php'); ?>
+    <?php include('AboutTable.php'); ?>
     <div id="Edit" class="forms">
-        <h2>Edit About Us Table</h3>
+        <h2>تغيير سجل معلومات عنا</h3>
             <form action="About/update.php" method="post" id="editForm">
 
                 <label> الرقم التسلسلي:
                 </label>
-                <input name="seqNo" required>
+                <input type="text" name="seqNo" pattern="[0-9]{1,3}" title="الرجاء إدخال الأرقام فقط " autofocus required>
                 <br>
                 <br>
                 <label> من نحن:
                 </label>
-                <textarea name="who_we_are" cols="100" rows="4" required></textarea>
+                <textarea name="who_we_are" cols="100" rows="4" placeholder="ادخل معلومات من نحن" required></textarea>
                 <br>
                 <label> الرؤية:
                 </label>
-                <textarea type="text" name="vision" cols="100" rows="4" required></textarea>
+                <textarea 6 name="vision" cols="100" rows="4" placeholder="ادخل معلومات عن الرؤية" required></textarea>
                 <br>
                 <label> المهمة:
                 </label>
-                <textarea type="text" name="mission" cols="100" rows="4" required></textarea>
+                <textarea 6 name="mission" cols="100" rows="4" placeholder="ادخل معلومات المهمة" required></textarea>
                 <br>
                 <label> القيم المؤسسية:
                 </label>
-                <textarea type="text" name="our_values" cols="100" rows="4" required></textarea>
+                <textarea 6 name="our_values" cols="100" rows="4" placeholder="ادخل معلومات القيم لمؤسسية" required></textarea>
                 <br>
                 <label>الأهداف الاستراتيجية:
                 </label>
 
-                <textarea type="text" name="goals" cols="100" rows="4" required></textarea>
+                <textarea 6 name="goals" cols="100" rows="4" placeholder="ادخل معلومات الأهداف الإستراتيجية" required></textarea>
                 <br>
                 <input type="submit" value="Edit" />
             </form>
     </div>
     <div id="insert" class="forms">
-        <h2>Insert a New Row into About Us Table</h3>
+        <h2>ادخل الى السجل</h3>
             <form action="About/insert.php" method="post" id="insertForm">
-                <label> الرقم التسلسلي:
-                </label>
-                <input name="seqNo" required>
-                <br><br>
+
                 <label> من نحن:
                 </label>
-                <textarea name="who_we_are" cols="100" rows="4" required></textarea>
+                <textarea name="who_we_are" cols="100" rows="4" placeholder="ادخل معلومات من نحن" required></textarea>
                 <br>
                 <label> الرؤية:
                 </label>
-                <textarea type="text" name="vision" cols="100" rows="4" required></textarea>
+                <textarea 6 name="vision" cols="100" rows="4" placeholder="ادخل معلومات عن الرؤية" required></textarea>
                 <br>
                 <label> المهمة:
                 </label>
-                <textarea type="text" name="mission" cols="100" rows="4" required></textarea>
+                <textarea 6 name="mission" cols="100" rows="4" placeholder="ادخل معلومات المهمة" required></textarea>
                 <br>
                 <label> القيم المؤسسية:
                 </label>
-                <textarea type="text" name="our_values" cols="100" rows="4" required></textarea>
+                <textarea name="our_values" cols="100" rows="4" placeholder="ادخل معلومات القيم لمؤسسية" required></textarea>
                 <br>
                 <label>الأهداف الاستراتيجية:
                 </label>
 
-                <textarea type="text" name="goals" cols="100" rows="4" required></textarea>
+                <textarea name="goals" cols="100" rows="4" placeholder="ادخل معلومات الأهداف الإستراتيجية" required></textarea>
                 <br>
                 <input type="submit" value="Insert" />
             </form>
     </div>
     <div id="delete" class="forms">
-        <h2>Delete a Row in About Us Table</h2>
+        <h2>حذف من السجل</h2>
         <p> اكتب الرفم التسلسلي للسجل الذي تريد إزالته:</p>
         <form action="About/delete.php" method="post" id="deleteForm">
-
+            <input type="hidden" name="table" value="about"/>
+            <input type="hidden" name="page" value="...php/AboutUs.php"/>
             <label> الرقم التسلسلي:
             </label>
-            <input name="seqNo" required>
+            <input type ="text" name="seqNo" pattern="[0-9]{1,3}" title="الرجاء إدخال الأرقام فقط " placeholder="ادخل الرقم التسلسي" autofocus required>
             <br>
-            <input type="submit" value="Delete" />
+            <input type="submit" value="Delete"/>
         </form>
     </div>
     <div class="footer">

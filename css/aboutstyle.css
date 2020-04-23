@@ -13,6 +13,9 @@ body{
     width:200px;
     background-color: white;
 }
+h2{
+    text-align: center;
+}
 .forms>h2 {
     margin-bottom: 25px;
     padding: 0;
@@ -21,26 +24,7 @@ body{
     color: #ac3236;
     text-align: center;
 }
-#display tr:first-child{
-    font-weight: bold;
-    background-color: #ac3236;
-    color: white;
-    padding-right: 15px;
-    font-size: 20px;
-}
-#display{
-    border-style: solid;
-    border-width: 5px;
-    border-radius: 10px;
-    border-color: #ac3236;
-    width: 800px;
-    position: relative;
-    text-align: center;
-    padding: 5px;
-    width: 1000px;
-    margin: 0 auto;
-    margin-bottom: 80px;
-}
+
 .forms{
     display: none;
     font-size: 14px;
@@ -48,7 +32,6 @@ body{
     border-color: #ac3236;
     border-width: 5px;
     border-radius: 10px;
-    width:800px;
     text-align: right;
     width: 800px;
     margin: 0 auto;
@@ -56,22 +39,17 @@ body{
     align-items: center;
     padding: 50px;
 }
-tr  td{
-    border-style: solid;
-    border-width: 2 px;
-    border-color: #ac3236;
-    padding: 10px;
-    
-}
+
 
 .forms  p{
     color: #ac3236;
     padding-right: 15px;
-    width: 500px;
+    
 }
-td  p{
-    word-break: keep-all;
-    margin: 20px auto
+
+.page {
+    margin:5%;
+    width:1050px;
 }
 
 label{
@@ -87,7 +65,7 @@ label{
 }
 
 input[type=text] {
-    width:50%;
+    width:30%;
   }
     
 input[type=textarea] {   

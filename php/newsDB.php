@@ -46,4 +46,4 @@ $body = $_POST['body'];
 
 $sql = "insert into news (title,image,date,body) values('$title','$image','$date','$body')";
 $result = $conn->query($sql);
-header('Location: ../php/news.php');
+header('Location: ../php/newsTable.php');
