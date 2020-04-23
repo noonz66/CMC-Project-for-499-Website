@@ -77,7 +77,7 @@ if (isset($_POST['submit'])) {
 
         if (mysqli_query($conn, $sql2)) {
             echo "Map Image Sucessfully uploaded";
-            header('Location: ../php/project.php');
+            header('Location: ../php/projectTable.php');
         } else {
             echo "Error";
         }
