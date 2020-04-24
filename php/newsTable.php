@@ -76,7 +76,7 @@
 
             if ($result = $mysqli->query($query)) {
                 while ($row = $result->fetch_assoc()){
-                    $field0name = $row["seqNo"];
+                    $field0name = $row["SeqNo"];
                     $field1name = $row["title"];
                     $field2name = $row["image"];
                     $field3name = $row["date"];

@@ -57,7 +57,7 @@
                     <!--hidden inputs-->
                     <input type="hidden" name="table" value="news"/>
                     <input type="hidden" name="page" value="../php/newsTable.php"/>
-                    <input type="hidden" name="pkey" value="seqNo"/> 
+                    <input type="hidden" name="pkey" value="SeqNo"/> 
                     
                     <!--inputs visible in form-->
                     <label> الرقم التسلسلي:
