@@ -60,14 +60,14 @@ if (time() - $lastactive > $autologout) {
               <input name="position" type="text" class="validate[required,custom[onlynumber],length[1,15]] feedback-input" placeholder="المنصب" id="postion" />
             </p>
             <p class="number">
-              <input name="phone_no" type="text" class="validate[required,custom[onlynumber],length[1,8]] feedback-input" placeholder="الرقم" id="number" />
+              <input name="phone_no" type="text" lang="en" class="validate[required,custom[onlynumber],length[1,8]] feedback-input lefttoright" placeholder="Phone Number in English: 973########" id="number" />
             </p>
             <p class="email">
-              <input name="email" type="email" class="validate[required,custom[email]] feedback-input" id="email" placeholder="البريد الاكتروني" />
+              <input name="email" type="email" lang="en" class="validate[required,custom[email]] feedback-input lefttoright" id="email" placeholder="Email Address in English: john@email.com" />
             </p>
             <p class="chickbox">
               <td> الصورة</td>
-              <input name="Image" type="file" id="Image" />
+              <input name="image" type="file" id="Image" />
             </p>
             <div class="submit">
               <input type="submit" value="حفظ البيانات" id="button-blue" name="submit" />
