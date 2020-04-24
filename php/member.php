@@ -67,7 +67,7 @@ if (time() - $lastactive > $autologout) {
             </p>
             <p class="chickbox">
               <td> الصورة</td>
-              <input name="image" type="file" id="Image" />
+              <input name="Image" type="file" id="chickbox" />
             </p>
             <div class="submit">
               <input type="submit" value="حفظ البيانات" id="button-blue" name="submit" />
