@@ -156,12 +156,17 @@ if (time() - $lastactive > $autologout) {
     <div id="delete" class="forms">
         <h2>حذف من السجل</h2>
         <p> اكتب الرفم التسلسلي للسجل الذي تريد إزالته:</p>
-        <form action="About/delete.php" method="post" id="deleteForm">
-            <input type="hidden" name="table" value="about"/>
-            <input type="hidden" name="page" value="...php/AboutUs.php"/>
-            <label> الرقم التسلسلي:
+        <form action="Delete.php" method="post" id="deleteForm">
+        
+        <!--hidden inputs-->
+        <input type="hidden" name="table" value="about"/>
+        <input type="hidden" name="page" value="../php/AboutUs.php"/>
+        <input type="hidden" name="pkey" value="seqNo"/> 
+        
+        <!--inputs visible in form-->
+        <label> الرقم التسلسلي:
             </label>
-            <input type ="text" name="seqNo" pattern="[0-9]{1,3}" title="الرجاء إدخال الأرقام فقط " placeholder="ادخل الرقم التسلسي" autofocus required>
+            <input type ="text" name="seqNo" pattern="[0-9]{1,4}" title="الرجاء إدخال الأرقام فقط " placeholder="ادخل الرقم التسلسي" autofocus required>
             <br>
             <input type="submit" value="Delete"/>
         </form>
