@@ -1,4 +1,17 @@
 
+.forms{
+    font-size: 14px;
+    border-style: solid;
+    border-color: #ac3236;
+    border-width: 5px;
+    border-radius: 10px;
+    text-align: right;
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    align-items: center;
+    padding: 50px;
+}
 #deleteForm{
     font-size: 14px;
     border-style: solid;
@@ -20,6 +33,20 @@ h2{
         padding-right: 15px;
         direction: rtl;    
 }
+
+
+label{
+    font-weight: bold;
+    background-color: #ac3236;
+    color: white;  
+    width: 200px;
+    height:50px;
+    border-width:5px;
+    border-style: solid;
+    border-color: #ac3236;
+    text-align: center;
+}
+
 #formh4{
     margin-bottom: 25px;
     padding: 0;
@@ -30,7 +57,14 @@ h2{
 input[type=text] {
     width:30%;
   }
-  input[type=submit]{
+      
+input[type=textarea] {   
+    border-radius: 4px;
+    resize: both;   
+    width: 100%; 
+    position: inline;
+  }
+  input[type=submit], button{
     background-color: #ac3236;
     color: white;
     border:2px solid #ccc;
@@ -38,7 +72,7 @@ input[type=text] {
     transition-duration: 0.4s;
   }
     
-input[type=submit]:hover{
+input[type=submit]:hover, button:hover{
     padding: 10px 24px;
     border:2px solid #ac3236;
     background-color: white ;
