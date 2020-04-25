@@ -30,7 +30,6 @@ if(isset($_POST['btn'])){
 }
 $FName = $_POST['FName'];
 $LName = $_POST['LName'];
-$Image = $_POST['Image'];
 $phone_no = $_POST['phone_no'];
 $email = $_POST['email'];
 $position = $_POST['position'];
@@ -41,15 +40,32 @@ $position = $_POST['position'];
 //exit('Please fill both the username and password fields!');
 //}
 
+    #file name with a random number so that similar dont get replaced
+    $pname = basename($_FILES["Image"]["name"]);
 
+    #temporary file name to store file
+    $tname = $_FILES["Image"]["tmp_name"];
 
+    #upload directory path
+    $uploads_dir = '../php/MemberUploads/';
 
+    $targetFilePath = $uploads_dir . $pname;
+    $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
+
+    // Allow certain file formats
+    $allowTypes = array('jpeg', 'jpg', 'png');
+    if (in_array($fileType, $allowTypes)) {
+
+        #TO move the uploaded file to specific location
+        move_uploaded_file($tname, $uploads_dir . '/' . $pname);
+    }
+     
 
    // echo "Done";
 //}else{
  //   echo "Missing something";
 //}
-$sql="insert into member (FName,LName,Image,phone_no,email,position) values('$FName','$LName','$Image','$phone_no','$email','$position')";
+$sql="insert into member (FName,LName,Image,phone_no,email,position) values('$FName','$LName','$pname','$phone_no','$email','$position')";
 $result = $conn ->query($sql);
 header('Location: ../php/memberTable.php');
 

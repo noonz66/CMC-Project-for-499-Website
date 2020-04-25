@@ -98,7 +98,8 @@
                 }
                 $result->free();  
             } 
-            echo '<tr><td colspan="7"><a href="project.php"  class="button">Insert</a><a href="projectDelete.php"  class="button">Delete</a></td></tr>'
+            echo '<tr><td colspan="7"><a href="project.php"  class="button">Insert</a><a href="projectDelete.php"  class="button">Delete</a>
+                    <a href="projectUpdate.php"  class="button">Edit</a></td></tr>'
         
         ?>
         </div>

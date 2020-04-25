@@ -68,7 +68,7 @@ if (time() - $lastactive > $autologout) {
 
                 <h3>معلومات عامة</h3>
                 <label>وصف المشروع</label><br>
-                <input type="textarea" name="desc" placeholder="وصف المشروع" id="desc" required>
+                <input type="textarea" name="desc" cols="100" rows="4" placeholder="وصف المشروع" id="desc" required>
                 <br>
                 <br>
                 <label class="right">ارفق صورة</label><br>
@@ -78,12 +78,12 @@ if (time() - $lastactive > $autologout) {
 
                 <h3 id="range">نطاق المشروع</h3>
                 <label>نطاق المشروع</label><br>
-                <input type="textarea" name="range" placeholder="نطاق المشروع" id="range" required>
+                <input type="textarea" name="range" cols="100" rows="4" placeholder="نطاق المشروع" id="range" required>
                 <br>
 
                 <h3 id="state">حالة المشروع</h3>
                 <label>حالة المشروع</label><br>
-                <input type="textarea" name="state" placeholder="حالة المشروع" id="state" required>
+                <input type="textarea" name="state" cols="100" rows="4" placeholder="حالة المشروع" id="state" required>
                 <br>
                 <label class="right">ارفق صورة</label><br>
                 <input type="file" name="mapImage" id="mapImage">

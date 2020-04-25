@@ -51,19 +51,19 @@ if (time() - $lastactive > $autologout) {
         <div id="form-div">
           <form class="form" id="form1">
             <p class="name">
-              <input name="FName" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="الاسم الاول" id="name" />
+              <input name="FName" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" required placeholder="الاسم الاول" id="name" />
             </p>
             <p class="name">
-              <input name="LName" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="الاسم الثاني" id="name" />
+              <input name="LName" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" required  placeholder="الاسم الثاني" id="name" />
             </p>
             <p class="postion">
-              <input name="position" type="text" class="validate[required,custom[onlynumber],length[1,15]] feedback-input" placeholder="المنصب" id="postion" />
+              <input name="position" type="text" class="validate[required,custom[onlynumber],length[1,15]] feedback-input" required placeholder="المنصب" id="postion" />
             </p>
             <p class="number">
-              <input name="phone_no" type="text" lang="en" class="validate[required,custom[onlynumber],length[1,8]] feedback-input lefttoright" placeholder="Phone Number in English: 973########" id="number" />
+              <input name="phone_no" type="text" lang="en" pattern="[0-9]{8}" title="ادخل 8 أرقام فقط"class="validate[required,custom[onlynumber],length[1,8]] feedback-input lefttoright" required placeholder="Phone Number in English: 973########" id="number" />
             </p>
             <p class="email">
-              <input name="email" type="email" lang="en" class="validate[required,custom[email]] feedback-input lefttoright" id="email" placeholder="Email Address in English: john@email.com" />
+              <input name="email" type="email" lang="en" class="validate[required,custom[email]] feedback-input lefttoright" id="email" required placeholder="Email Address in English: john@email.com" />
             </p>
             <p class="chickbox">
               <td> الصورة</td>

@@ -5,22 +5,18 @@ $password = '';
 $dbname = "cmc";
 
 $conn = mysqli_connect($servername, $username, $password, "$dbname");
-if (!$conn) {
-    die('Could not Connect MySql Server:' . mysql_error());
+
+if (mysqli_connect_errno()) {
+    // If there is an error with the connection, stop the script and display the error.
+    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
+
 if (isset($_POST['submit'])) {
+    
     $t = $_POST['project'];
     $des = $_POST['desc'];
     $r = $_POST['range'];
     $s = $_POST['state'];
-
-    $insert_text = "INSERT INTO projects_info (title,description,status,area) VALUES ('$t','$des','$s','$r')";
-
-    if (mysqli_query($conn, $insert_text)) {
-        echo "New record has been added successfully !";
-    } else {
-        echo "Error: " . $insert_text . ":-" . mysqli_error($conn);
-    }
 
     #file name with a random number so that similar dont get replaced
     $pname = basename($_FILES["descImage"]["name"]);
@@ -40,18 +36,8 @@ if (isset($_POST['submit'])) {
 
         #TO move the uploaded file to specific location
         move_uploaded_file($tname, $uploads_dir . '/' . $pname);
-
-        #sql query to insert into database
-        $sql = "INSERT into projects_info(image) VALUES('$pname')";
-
-        if (mysqli_query($conn, $sql)) {
-            echo "Description Image Sucessfully uploaded";
-        } else {
-            echo "Error";
-        }
-    } else {
-        echo "Wrong File Format! Please upload either .pdf or .zip or .rar files";
     }
+     
 
     #file name with a random number so that similar dont get replaced
     $pname2 = basename($_FILES["mapImage"]["name"]);
@@ -71,17 +57,16 @@ if (isset($_POST['submit'])) {
 
         #TO move the uploaded file to specific location
         move_uploaded_file($tname2, $uploads_dir2 . '/' . $pname2);
-
-        #sql query to insert into database
-        $sql2 = "INSERT into projects_info(map) VALUES('$pname2')";
-
-        if (mysqli_query($conn, $sql2)) {
-            echo "Map Image Sucessfully uploaded";
-            header('Location: ../php/projectTable.php');
-        } else {
-            echo "Error";
-        }
-    } else {
-        echo "Wrong File Format! Please upload either .jpeg or .jpg or .png files";
     }
+     
+
+    $insert_text = "INSERT INTO projects_info (title,description,status,area, image, map) VALUES ('$t','$des','$s','$r','$pname', '$pname2')";
+
+    $conn->query($insert_text);
+
+    header('Location:../php/projectTable.php');
+            
+    exit();  
 }
+
+?>

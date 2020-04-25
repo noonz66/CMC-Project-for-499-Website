@@ -91,14 +91,16 @@ if (time() - $lastactive > $autologout) {
     <div class="content">
         <h2>معلومات عنا</h2>
     </div>
-    <?php include('AboutTable.php'); ?>
+    <?php include('aboutTable.php'); ?>
     <div id="Edit" class="forms">
-        <h2>تغيير سجل معلومات عنا</h3>
-            <form action="update.php" method="post" id="editForm">
+        <h2>تغيير سجل معلومات عنا</h2>
+            <form action="aboutUpdate.php" method="post" id="editForm">
+            <p> اكتب الرفم التسلسلي للسجل الذي تريد تعديله:</p>
 
                 <label> الرقم التسلسلي:
                 </label>
                 <input type="text" name="seqNo" pattern="[0-9]{1,3}" title="الرجاء إدخال الأرقام فقط " autofocus required>
+                <br>
                 <br>
                 <br>
                 <label> من نحن:
@@ -126,20 +128,20 @@ if (time() - $lastactive > $autologout) {
             </form>
     </div>
     <div id="insert" class="forms">
-        <h2>ادخل الى السجل</h3>
+        <h2>ادخل الى السجل</h2>
             <form action="aboutInsert.php" method="post" id="insertForm">
-
+                
                 <label> من نحن:
                 </label>
                 <textarea name="who_we_are" cols="100" rows="4" placeholder="ادخل معلومات من نحن" required></textarea>
                 <br>
                 <label> الرؤية:
                 </label>
-                <textarea 6 name="vision" cols="100" rows="4" placeholder="ادخل معلومات عن الرؤية" required></textarea>
+                <textarea  name="vision" cols="100" rows="4" placeholder="ادخل معلومات عن الرؤية" required></textarea>
                 <br>
                 <label> المهمة:
                 </label>
-                <textarea 6 name="mission" cols="100" rows="4" placeholder="ادخل معلومات المهمة" required></textarea>
+                <textarea  name="mission" cols="100" rows="4" placeholder="ادخل معلومات المهمة" required></textarea>
                 <br>
                 <label> القيم المؤسسية:
                 </label>

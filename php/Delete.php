@@ -8,24 +8,44 @@
     if ($mysqli->connect_error) {
         die("Connection failed: " . $mysqli->connect_error);
     }
-    // properly escape your values before you send them to DB
-    // to prevent SQL injection attacks.
 
-        $table = $mysqli->real_escape_string($_POST['table']);
-        $page = $mysqli->real_escape_string($_POST['page']);
-        $pkey = $mysqli->real_escape_string($_POST['pkey']);
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (!empty($_POST["table"])) {
+      
+        $table = test_input($_POST['table']);
+        }
+    
+        if (!empty($_POST["page"])) {
+        
+        $page = test_input($_POST['page']);
+        }
 
+        if (!empty($_POST["pkey"])) {
        
-            $field1 = $mysqli->real_escape_string($_POST[$pkey]);
-              
-            $query = "DELETE FROM {$table} WHERE {$pkey} = '{$field1}'";
+            $pkey = test_input($_POST['pkey']);
+        }
+        
+        if (!empty($_POST[$pkey])) {                    
+            $field1 = test_input($_POST[$pkey]);
+        }
+    
+    }
 
-            $mysqli->query($query);
-            $mysqli->close();
+    function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+      
+              
+        $query = "DELETE FROM {$table} WHERE {$pkey} = '{$field1}'";
+
+        $mysqli->query($query);
+        $mysqli->close();
             
-            header('Location:'.$page);
+        header('Location:'.$page);
             
-            exit();
-                
+        exit();               
 
 ?>
