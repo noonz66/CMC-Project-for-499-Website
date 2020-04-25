@@ -12,23 +12,11 @@
     align-items: center;
     padding: 50px;
 }
-#deleteForm{
-    font-size: 14px;
-    border-style: solid;
-    border-color: #ac3236;
-    border-width: 5px;
-    border-radius: 10px;
-    text-align: right;
-    width: 800px;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    align-items: center;
-    padding: 50px;
-}
+
 h2{
     text-align: center;
 }
-#deleteForm    p{
+.forms    p{
         color: #ac3236;
         padding-right: 15px;
         direction: rtl;    
