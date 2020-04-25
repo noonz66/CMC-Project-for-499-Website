@@ -94,7 +94,7 @@ if (time() - $lastactive > $autologout) {
     <?php include('AboutTable.php'); ?>
     <div id="Edit" class="forms">
         <h2>تغيير سجل معلومات عنا</h3>
-            <form action="About/update.php" method="post" id="editForm">
+            <form action="update.php" method="post" id="editForm">
 
                 <label> الرقم التسلسلي:
                 </label>
@@ -103,31 +103,31 @@ if (time() - $lastactive > $autologout) {
                 <br>
                 <label> من نحن:
                 </label>
-                <textarea name="who_we_are" cols="100" rows="4" placeholder="ادخل معلومات من نحن" required></textarea>
+                <textarea name="who_we_are" cols="100" rows="4" placeholder="ادخل معلومات من نحن" ></textarea>
                 <br>
                 <label> الرؤية:
                 </label>
-                <textarea 6 name="vision" cols="100" rows="4" placeholder="ادخل معلومات عن الرؤية" required></textarea>
+                <textarea name="vision" cols="100" rows="4" placeholder="ادخل معلومات عن الرؤية" ></textarea>
                 <br>
                 <label> المهمة:
                 </label>
-                <textarea 6 name="mission" cols="100" rows="4" placeholder="ادخل معلومات المهمة" required></textarea>
+                <textarea  name="mission" cols="100" rows="4" placeholder="ادخل معلومات المهمة" ></textarea>
                 <br>
                 <label> القيم المؤسسية:
                 </label>
-                <textarea 6 name="our_values" cols="100" rows="4" placeholder="ادخل معلومات القيم لمؤسسية" required></textarea>
+                <textarea  name="our_values" cols="100" rows="4" placeholder="ادخل معلومات القيم لمؤسسية" ></textarea>
                 <br>
                 <label>الأهداف الاستراتيجية:
                 </label>
 
-                <textarea 6 name="goals" cols="100" rows="4" placeholder="ادخل معلومات الأهداف الإستراتيجية" required></textarea>
+                <textarea  name="goals" cols="100" rows="4" placeholder="ادخل معلومات الأهداف الإستراتيجية" ></textarea>
                 <br>
                 <input type="submit" value="Edit" />
             </form>
     </div>
     <div id="insert" class="forms">
         <h2>ادخل الى السجل</h3>
-            <form action="About/insert.php" method="post" id="insertForm">
+            <form action="aboutInsert.php" method="post" id="insertForm">
 
                 <label> من نحن:
                 </label>
