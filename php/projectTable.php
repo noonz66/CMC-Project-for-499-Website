@@ -66,7 +66,8 @@
                     echo ' 
                         <table id="display"> 
                             <tr> 
-                                <th> <font face="Arial">إضافة مشروع</font> </th> 
+                                <th> <font face="Arial">الرقم التسلسلي</font> </th> 
+                                <th> <font face="Arial">عنوان المشروع</font> </th> 
                                 <th> <font face="Arial">معلومات عامة</font> </th> 
                                 <th> <font face="Arial">نطاق المشروع</font> </th> 
                                 <th> <font face="Arial">صورة المشروع</font> </th> 
@@ -77,6 +78,7 @@
 
             if ($result = $mysqli->query($query)) {
                 while ($row = $result->fetch_assoc()) {
+                    $field1name = $row["seqNo"];
                     $field2name = $row["title"];
                     $field3name = $row["description"];
                     $field4name = $row["status"];
@@ -85,6 +87,7 @@
                     $field7name = $row["map"];
             
                     echo '<tr> 
+                            <td><p>'.$field1name.'</p></td> 
                             <td><p>'.$field2name.'</p></td> 
                             <td><p>'.$field3name.'</p></td> 
                             <td><p>'.$field4name.'</p></td> 
@@ -95,7 +98,7 @@
                 }
                 $result->free();  
             } 
-            echo '<tr><td colspan="6"><a href="project.php"  class="button">Insert</a></td></tr>'
+            echo '<tr><td colspan="7"><a href="project.php"  class="button">Insert</a><a href="projectDelete.php"  class="button">Delete</a></td></tr>'
         
         ?>
         </div>

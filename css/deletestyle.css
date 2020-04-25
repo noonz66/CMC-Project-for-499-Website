@@ -1,0 +1,46 @@
+
+#deleteForm{
+    font-size: 14px;
+    border-style: solid;
+    border-color: #ac3236;
+    border-width: 5px;
+    border-radius: 10px;
+    text-align: right;
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    align-items: center;
+    padding: 50px;
+}
+h2{
+    text-align: center;
+}
+#deleteForm    p{
+        color: #ac3236;
+        padding-right: 15px;
+        direction: rtl;    
+}
+#formh4{
+    margin-bottom: 25px;
+    padding: 0;
+    border-bottom: 1px solid #e0e0e3;
+    color: #ac3236;
+    text-align: center;
+}
+input[type=text] {
+    width:30%;
+  }
+  input[type=submit]{
+    background-color: #ac3236;
+    color: white;
+    border:2px solid #ccc;
+    padding: 10px 24px;
+    transition-duration: 0.4s;
+  }
+    
+input[type=submit]:hover{
+    padding: 10px 24px;
+    border:2px solid #ac3236;
+    background-color: white ;
+    color: #ac3236;  
+}

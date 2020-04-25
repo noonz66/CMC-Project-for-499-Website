@@ -20,27 +20,15 @@
     }
 
 
-    $username = "root";
-    $password = "";
-    $database = "cmc";
-
-    $mysqli = new mysqli("localhost", $username, $password, $database);
-
-    // Check connection
-    if ($mysqli->connect_error) {
-        die("Connection failed: " . $mysqli->connect_error);
-    }
-    $query = "SELECT * FROM news";
-    $result = $mysqli->query($query);
 ?>
 <!DOCTYPE html>
 <html class="righttoleft">
 
 <head>
     <meta charset="utf-8">
-    <title>الأخبار</title>
+    <title>المشاريع</title>
     <link href="../css/homestyle.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="../css/tablestyle.css">
+    <link href="../css/deletestyle.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/04dee08355.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -61,42 +49,27 @@
     </header>
     <div class="content">
         <div class="page">
-            <h2>جدول الأخبار</h2>
-            <?php
-                    echo ' 
-                        <table id="display"> 
-                            <tr> 
-                                <th> <font face="Arial">الرقم التسلسلي</font> </th> 
-                                <th> <font face="Arial">العنوان</font> </th> 
-                                <th> <font face="Arial">الصورة</font> </th>
-                                <th> <font face="Arial">التاريخ</font> </th> 
-                                <th> <font face="Arial">المقال</font> </th> 
-                            </tr>
-                        ';     
-
-            if ($result = $mysqli->query($query)) {
-                while ($row = $result->fetch_assoc()){
-                    $field0name = $row["SeqNo"];
-                    $field1name = $row["title"];
-                    $field2name = $row["image"];
-                    $field3name = $row["date"];
-                    $field4name = $row["body"];
-            
-                    echo '<tr> 
-                            <td><p>'.$field0name.'</p></td> 
-                            <td><p>'.$field1name.'</p></td> 
-                            <td><p>'.$field2name.'</p></td> 
-                            <td><p>'.$field3name.'</p></td> 
-                            <td><p>'.$field4name.'</p></td>                     
-                        </tr>';
-                }
-                $result->free();  
-            } 
-            echo '<tr><td colspan="5"><a href="news.php"  class="button">Insert</a> <a href="newsDelete.php"  class="button">Delete</a></td></tr>'
-        
-            ?>
-            </div>
+            <div id="delete" class="forms">
+                <h2>المشاريع</h2>
+                <form action="Delete.php" method="post" id="deleteForm">
+                    <h4 id="formh4">حذف من السجل</h4>
+                    <p> اكتب الرفم التسلسلي للسجل الذي تريد إزالته:</p>
+                    <!--hidden inputs-->
+                    <input type="hidden" name="table" value="projects_info"/>
+                    <input type="hidden" name="page" value="../php/projectTable.php"/>
+                    <input type="hidden" name="pkey" value="seqNo"/> 
+                    
+                    <!--inputs visible in form-->
+                    <label> الرقم التسلسلي:
+                        </label>
+                        <input type ="text" name="seqNo" pattern="[0-9]{1,4}" title="الرجاء إدخال الأرقام فقط " placeholder="ادخل الرقم التسلسي" autofocus required>
+                        <br>
+                    <input type="submit" value="Delete"/>
+                </form>
+    
+            </div>      
         </div>
+    </div>
     <div class="footer">
         <p>مجلس أمانة العاصمة البحرين &copy</p>
     </div>

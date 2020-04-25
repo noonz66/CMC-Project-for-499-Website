@@ -18,7 +18,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>المشاريع</title>
+    <title>الأعضاء</title>
     <link href="../css/homestyle.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="../css/tablestyle.css">
     <script src="https://kit.fontawesome.com/04dee08355.js" crossorigin="anonymous"></script>
@@ -46,6 +46,7 @@
             echo ' 
             <table id="display"> 
         <tr> 
+            <th> <font face="Arial">الرقم التسلسلي</font> </th> 
             <th> <font face="Arial">الاسم الاول</font> </th> 
             <th> <font face="Arial">الاسم الثاني</font> </th> 
             <th> <font face="Arial">المنصب</font> </th> 
@@ -57,6 +58,7 @@
 
             if ($result = $mysqli->query($query)) {
                 while ($row = $result->fetch_assoc()) {
+                    $field0name = $row["seqNo"];
                     $field1name = $row["FName"];
                     $field2name = $row["LName"];
                     $field3name = $row["position"];
@@ -64,8 +66,9 @@
                     $field5name = $row["email"]; 
                     $field6name = $row["Image"]; 
             
-                    echo '<tr> 
-                            <td>'.$field1name.'</td> 
+                    echo '<tr>                           
+                            <td><p>'.$field0name.'</p></td> 
+                            <td><p>'.$field1name.'</p></td> 
                             <td><p>'.$field2name.'</p></td> 
                             <td><p>'.$field3name.'</p></td> 
                             <td><p>'.$field4name.'</p></td> 
@@ -75,7 +78,7 @@
                 }
                 $result->free();  
             } 
-        echo '<tr><td colspan="6"><a href="member.php" class="button">Insert</a></td></tr>'
+        echo '<tr><td colspan="7"><a href="member.php" class="button">Insert</a> <a href="memberDelete.php"  class="button">Delete</a></td></tr>'
         
         ?>
         </div>
