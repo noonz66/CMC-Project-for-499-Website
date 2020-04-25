@@ -49,15 +49,15 @@
     </header>
     <div class="content">
         <div class="page">
+        <h2>الأخبار</h2>
             <div id="delete" class="forms">
-                <h2>الأخبار</h2>
                 <form action="Delete.php" method="post" id="deleteForm">
                     <h4 id="formh4">حذف من السجل</h4>
                     <p> اكتب الرفم التسلسلي للسجل الذي تريد إزالته:</p>
                     <!--hidden inputs-->
                     <input type="hidden" name="table" value="news"/>
                     <input type="hidden" name="page" value="../php/newsTable.php"/>
-                    <input type="hidden" name="pkey" value="SeqNo"/> 
+                    <input type="hidden" name="pkey" value="seqNo"/> 
                     
                     <!--inputs visible in form-->
                     <label> الرقم التسلسلي:

@@ -44,7 +44,7 @@
         }
         $result->free();  
     } 
-    echo '<tr><td colspan="6"><button onclick="deleteRow()">Delete</button>     <button onclick="insert()">Insert</button>  <button onclick="edit()">Edit</button></td></tr>
+    echo '<tr><td colspan="6"><button onclick="deleteRow()">Delete</button>     <button onclick="insert()">Insert</button>     <button onclick="edit()">Edit</button></td></tr>
     </div>'
 
 ?>

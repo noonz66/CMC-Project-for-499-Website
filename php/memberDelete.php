@@ -49,8 +49,9 @@
     </header>
     <div class="content">
         <div class="page">
+        <h2>الأعضاء</h2>
+
             <div id="delete" class="forms">
-                <h2>الأعضاء</h2>
                 <form action="Delete.php" method="post" id="deleteForm">
                     <h4 id="formh4">حذف من السجل</h4>
                     <p> اكتب الرفم التسلسلي للسجل الذي تريد إزالته:</p>
