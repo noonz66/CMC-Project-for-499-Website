@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Apr 13, 2020 at 02:57 AM
+-- Host: 127.0.0.1
+-- Generation Time: Apr 24, 2020 at 11:17 PM
 -- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.4
+-- PHP Version: 7.4.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -41,7 +42,7 @@ CREATE TABLE `about` (
 --
 
 INSERT INTO `about` (`seqNo`, `who_we_are`, `vision`, `mission`, `our_values`, `goals`) VALUES
-(1, 'تشكيل مجلس امانة العاصمة \r\nصدر عن حضرة صاحب الجلالة الملك حمد بن عيسى آل خليفة عاهل البلاد المفدى حفظه الله ورعاه، مرسوم رقم (60) لسنة 2018 بتشكيل مجلس أمانة العاصمة. \r\nوجاء في المادة الأولى من المرسوم أنه يشكل مجلس أمانة العاصمة برئاسة صالح طاهر محمد طرادة، وعضوية كل من عزيزة عبد الرحيم محمد كمال نائبًا للرئيس، والدكتور عبدالواحد عبدالوهاب أحمد النكال، والدكتورة مها صالح حسين آل شهاب، وخلود راشد عبدالرحمن القطان، والدكتورة لولوة مطلق راشد مطلق، ومبارك أحمد مبارك النعيمي، والمهندس محمد توفيق رضا آل عباس، والمهندس محمد سلمان علي الهندي، والمهندسة هدى سلطان مبارك فرج.\r\n\r\n', 'أن يكون للمجلس الدور الطليعي لتكون العاصمة رائدة ومتطورة بخدمات متميزة ومستدامة', 'السعي نحو عاصمة صديقة للبيئة ذات خدمات راقية ينعم ساكنوها بجودة الحياة.\r\nمزدهرة بالشراكة الاجتماعية والاقتصادية المستدامة.\r\nمتطورة بالقوانين والتشريعات البلدية.', 'العمل الجماعي.\r\nالتميز والابداع والاحترافية.\r\nالولاء المؤسسي وأخلاقيات العمل.\r\nالشفافية والعدالة.\r\nالمساءلة والمحاسبة.', 'تطوير منظومة القوانين البلدية.\r\nمراقبة الجهاز التنفيذي والمشاركة في اتخاذ القرار.\r\nتطوير الخدمات البلدية.\r\nتنمية المشاريع والاستثمارات البلدية.\r\nالمساهمة في تطوير التخطيط العمراني.\r\nنشر الوعي البلدي.');
+(1, 'تشكيل مجلس امانة العاصمة \r\nصدر عن حضرة صاحب الجلالة الملك حمد بن عيسى آل خليفة عاهل البلاد المفدى حفظه الله ورعاه، مرسوم رقم (60) لسنة 2018 بتشكيل مجلس أمانة العاصمة. \r\nوجاء في المادة الأولى من المرسوم أنه يشكل مجلس أمانة العاصمة برئاسة صالح طاهر محمد طرادة، وعضوية كل من عزيزة عبد الرحيم محمد كمال نائبًا للرئيس، والدكتور عبدالواحد عبدالوهاب أحمد النكال، والدكتورة مها صالح حسين آل شهاب، وخلود راشد عبدالرحمن القطان، والدكتورة لولوة مطلق راشد مطلق، ومبارك أحمد مبارك النعيمي، والمهندس محمد توفيق رضا آل عباس، والمهندس محمد سلمان علي الهندي، والمهندسة هدى سلطان مبارك فرج.\r\n', 'أن يكون للمجلس الدور الطليعي لتكون العاصمة رائدة ومتطورة بخدمات متميزة ومستدامة\r\n\r\n', 'السعي نحو عاصمة صديقة للبيئة ذات خدمات راقية ينعم ساكنوها بجودة الحياة.\r\nمزدهرة بالشراكة الاجتماعية والاقتصادية المستدامة.\r\nمتطورة بالقوانين والتشريعات البلدية.\r\n', 'العمل الجماعي.\r\nالتميز والابداع والاحترافية.\r\nالولاء المؤسسي وأخلاقيات العمل.\r\nالشفافية والعدالة.\r\nالمساءلة والمحاسبة.', 'تطوير منظومة القوانين البلدية.\r\nمراقبة الجهاز التنفيذي والمشاركة في اتخاذ القرار.\r\nتطوير الخدمات البلدية.\r\nتنمية المشاريع والاستثمارات البلدية.\r\nالمساهمة في تطوير التخطيط العمراني.\r\nنشر الوعي البلدي.');
 
 -- --------------------------------------------------------
 
@@ -200,7 +201,7 @@ CREATE TABLE `member` (
 --
 
 CREATE TABLE `news` (
-  `SeqNo` int(100) NOT NULL,
+  `seqNo` int(100) NOT NULL,
   `title` text NOT NULL,
   `image` text DEFAULT NULL,
   `date` date NOT NULL,
@@ -218,8 +219,7 @@ CREATE TABLE `participant_info` (
   `firstName` varchar(50) NOT NULL,
   `lastName` varchar(50) NOT NULL,
   `phone` int(8) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `eventID` int(255) NOT NULL
+  `email` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -237,6 +237,13 @@ CREATE TABLE `projects_info` (
   `image` varchar(200) NOT NULL,
   `map` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `projects_info`
+--
+
+INSERT INTO `projects_info` (`seqNo`, `title`, `description`, `status`, `area`, `image`, `map`) VALUES
+(10, 'ميكمبيكمسنب', 'يبسسسيبسيبسيبسي', 'منلةيبنملبةيبنملةيمبنلمينبلنميبلنميبلمنيبلمنيلنميس', 'منةةمةمنةمنةمنةمةمنةمنةمنةمن', '', '');
 
 -- --------------------------------------------------------
 
@@ -273,12 +280,22 @@ ALTER TABLE `events_info`
   ADD PRIMARY KEY (`seqNo`);
 
 --
+-- Indexes for table `member`
+--
+ALTER TABLE `member`
+  ADD PRIMARY KEY (`SeqNo`);
+
+--
+-- Indexes for table `news`
+--
+ALTER TABLE `news`
+  ADD PRIMARY KEY (`seqNo`);
+
+--
 -- Indexes for table `participant_info`
 --
 ALTER TABLE `participant_info`
-  ADD PRIMARY KEY (`SeqNo`),
-  ADD UNIQUE KEY `eventID` (`eventID`),
-  ADD KEY `eventID_2` (`eventID`);
+  ADD PRIMARY KEY (`SeqNo`);
 
 --
 -- Indexes for table `projects_info`
@@ -297,6 +314,12 @@ ALTER TABLE `surveys_info`
 --
 
 --
+-- AUTO_INCREMENT for table `about`
+--
+ALTER TABLE `about`
+  MODIFY `seqNo` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
@@ -309,6 +332,18 @@ ALTER TABLE `events_info`
   MODIFY `seqNo` int(255) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `member`
+--
+ALTER TABLE `member`
+  MODIFY `SeqNo` int(15) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `news`
+--
+ALTER TABLE `news`
+  MODIFY `seqNo` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `participant_info`
 --
 ALTER TABLE `participant_info`
@@ -318,23 +353,13 @@ ALTER TABLE `participant_info`
 -- AUTO_INCREMENT for table `projects_info`
 --
 ALTER TABLE `projects_info`
-  MODIFY `seqNo` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `seqNo` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `surveys_info`
 --
 ALTER TABLE `surveys_info`
   MODIFY `seqNo` int(255) NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `participant_info`
---
-ALTER TABLE `participant_info`
-  ADD CONSTRAINT `participant_info_ibfk_1` FOREIGN KEY (`eventID`) REFERENCES `events_info` (`seqNo`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
