@@ -22,7 +22,6 @@ h2{
         direction: rtl;    
 }
 
-
 label{
     font-weight: bold;
     background-color: #ac3236;
@@ -46,7 +45,7 @@ input[type=text] {
     width:30%;
   }
       
-input[type=textarea] {   
+  input[type=textarea] {   
     border-radius: 4px;
     resize: both;   
     width: 100%; 

@@ -19,6 +19,7 @@ if (time() - $lastactive > $autologout) {
   $_SESSION['timestamp'] = time();              //Or reset the timestamp
 }
 ?>
+
 <!DOCTYPE html>
 <html class="righttoleft">
 
@@ -51,17 +52,17 @@ if (time() - $lastactive > $autologout) {
         <div id="form-div">
           <form class="form" id="form1">
             <p class="title">
-              <input name="title" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="العنوان " id="title" />
+              <input name="title" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="العنوان " id="title" required/>
             </p>
             <p class="date">
-              <input name="date" type="date" class="validate[required,custom[onlydate]] feedback-input" placeholder="التاريخ" id="date" />
+              <input name="date" type="date"  class="validate[required,custom[onlydate]] feedback-input" placeholder="التاريخ" id="date" required/>
             </p>
             <p class="text">
-              <textarea name="body" class="validate[required,length[6,500]] feedback-input" id="body" placeholder="المقال"></textarea>
+              <textarea name="body" class="validate[required,length[6,500]] feedback-input" id="body" placeholder="المقال" required></textarea>
             </p>
             <p class="chickbox">
               <td> الصورة</td>
-              <input name="image" type="file" id="chickbox" />
+              <input name="image" type="file" id="chickbox" required/>
             </p>
             <div class="submit">
               <input type="submit" value="حفظ البيانات" id="button-blue" />

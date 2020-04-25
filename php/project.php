@@ -61,14 +61,19 @@ if (time() - $lastactive > $autologout) {
             <form action="../php/projectsActivity.php" method="post" enctype="multipart/form-data">
 
                 <h3 id="addProject">إضافة مشروع</h3>
+                <br>
                 <label>عنوان المشروع</label><br>
+                <br>
                 <input type="text" name="project" placeholder="عنوان المشروع" id="project" required>
                 <br>
                 <hr id="info" class="style-one">
 
                 <h3>معلومات عامة</h3>
-                <label>وصف المشروع</label><br>
-                <input type="textarea" name="desc" cols="100" rows="4" placeholder="وصف المشروع" id="desc" required>
+                <br>
+                <label>وصف المشروع</label>
+                <br>
+                <br>
+                <textarea name="desc" cols="120" rows="4" placeholder="وصف المشروع" id="desc" required></textarea>
                 <br>
                 <br>
                 <label class="right">ارفق صورة</label><br>
@@ -77,13 +82,19 @@ if (time() - $lastactive > $autologout) {
                 <hr class="style-one">
 
                 <h3 id="range">نطاق المشروع</h3>
+                <br>
                 <label>نطاق المشروع</label><br>
-                <input type="textarea" name="range" cols="100" rows="4" placeholder="نطاق المشروع" id="range" required>
+                <br>
+
+                <textarea name="range" cols="120" rows="4" placeholder="نطاق المشروع" id="range" required></textarea>
                 <br>
 
                 <h3 id="state">حالة المشروع</h3>
+                <br>
                 <label>حالة المشروع</label><br>
-                <input type="textarea" name="state" cols="100" rows="4" placeholder="حالة المشروع" id="state" required>
+                <br>
+
+                <textarea name="state" cols="120" rows="4" placeholder="حالة المشروع" id="state" required></textarea>
                 <br>
                 <label class="right">ارفق صورة</label><br>
                 <input type="file" name="mapImage" id="mapImage">
