@@ -34,7 +34,7 @@ tr  td{
     
 }
 td  p{
-    word-break:  break-word;
+    word-break: break-word;
     margin: 30px auto;
     white-space: pre-line;
 }
